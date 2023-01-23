@@ -6,6 +6,6 @@ export class Dollar {
   }
 
   equals(instance: Dollar): boolean {
-    return true;
+    return this.amount === instance.amount;
   }
 }
