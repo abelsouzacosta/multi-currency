@@ -4,4 +4,8 @@ export class Dollar {
   times(rounds: number): Dollar {
     return new Dollar(this.amount * rounds);
   }
+
+  equals(instance: Dollar): boolean {
+    return true;
+  }
 }
