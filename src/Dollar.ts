@@ -1,7 +1,7 @@
 export class Dollar {
   constructor(public amount: number) {}
 
-  times(rounds: number): void {
-    this.amount *= 2;
+  times(rounds: number): Dollar {
+    return new Dollar(this.amount * rounds);
   }
 }
