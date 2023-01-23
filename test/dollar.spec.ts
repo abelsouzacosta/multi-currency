@@ -1,6 +1,11 @@
 import { Dollar } from "../src/Dollar";
 
 describe("Dollar", () => {
+  it("should return five dollars if the amount given is 5", () => {
+    let five = new Dollar(5);
+    expect(five.amount).toEqual(5);
+  });
+
   it("should return 10 whan 5 dollars is multipled by two", () => {
     let five = new Dollar(5);
     let result = five.times(2);
