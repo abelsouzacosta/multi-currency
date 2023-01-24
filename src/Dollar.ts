@@ -1,5 +1,5 @@
 export class Dollar {
-  constructor(public amount: number) {}
+  constructor(private amount: number) {}
 
   times(rounds: number): Dollar {
     return new Dollar(this.amount * rounds);
@@ -7,5 +7,9 @@ export class Dollar {
 
   equals(instance: Dollar): boolean {
     return this.amount === instance.amount;
+  }
+
+  getAmount(): number {
+    return this.amount;
   }
 }
