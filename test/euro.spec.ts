@@ -1,3 +1,4 @@
+import { Dollar } from "../src/Dollar";
 import { Euro } from "../src/Euro";
 
 describe("Euro", () => {
@@ -7,6 +8,10 @@ describe("Euro", () => {
 
   it("should return false when five Euros is compared to six Euros", () => {
     expect(new Euro(5).equals(new Euro(6))).toBe(false);
+  });
+
+  it("should return false when euro is compared to another coin", () => {
+    expect(new Euro(10).equals(new Dollar(10))).toBe(false);
   });
 
   it("should return five Euros if the amount given is 5", () => {
