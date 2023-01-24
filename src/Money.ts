@@ -5,8 +5,10 @@ export class Money {
     return this.amount;
   }
 
-  equals(instace: Money): boolean {
-    return this.amount === instace.amount;
+  equals(instance: Money): boolean {
+    if (this.constructor !== instance.constructor) return false;
+
+    return this.amount === instance.amount;
   }
 
   times(rounds: number): Money {
