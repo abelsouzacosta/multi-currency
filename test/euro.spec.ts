@@ -1,5 +1,4 @@
-import { Dollar } from "../src/Dollar";
-import { Euro } from "../src/Euro";
+import { Euro, Dollar } from "../src/Money";
 
 describe("Euro", () => {
   it("should return true when five Euros is compared to another instance of five Euros", () => {
