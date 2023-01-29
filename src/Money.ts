@@ -31,12 +31,12 @@ export abstract class Money {
 
 export class Dollar extends Money {
   times(rounds: number): Dollar {
-    return new Dollar(this.amount * rounds, this.getCurrency());
+    return Money.dollar(this.amount * rounds);
   }
 }
 
 export class Euro extends Money {
-  times(rounds: number): Money {
-    return new Euro(this.amount * rounds, this.getCurrency());
+  times(rounds: number): Euro {
+    return Money.euro(this.amount * rounds);
   }
 }
