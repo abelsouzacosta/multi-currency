@@ -31,6 +31,6 @@ describe("Dollar", () => {
   });
 
   it("should correctly handle the currency", () => {
-    expect(Money.dollar(1).currency()).toBe("USD");
+    expect(Money.dollar(1).getCurrency()).toBe("USD");
   });
 });

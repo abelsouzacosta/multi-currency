@@ -33,6 +33,6 @@ describe("Euro", () => {
   });
 
   it("should correctly handle the currency", () => {
-    expect(Money.euro(1).currency()).toBe("EUR");
+    expect(Money.euro(1).getCurrency()).toBe("EUR");
   });
 });
