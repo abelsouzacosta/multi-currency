@@ -1,7 +1,7 @@
 export class Money {
   constructor(
-    protected readonly amount: number,
-    protected readonly currency: string
+    private readonly amount: number,
+    private readonly currency: string
   ) {}
 
   static dollar(amount: number): Money {
