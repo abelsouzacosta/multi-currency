@@ -29,4 +29,8 @@ describe("Dollar", () => {
     const result = dollar.times(3);
     expect(result.getAmount()).toEqual(15);
   });
+
+  it("should correctly handle the currency", () => {
+    expect(Money.dollar(1).currency()).toBe("USD");
+  });
 });

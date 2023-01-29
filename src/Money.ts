@@ -1,4 +1,4 @@
-export class Money {
+export abstract class Money {
   constructor(protected readonly amount: number) {}
 
   static dollar(amount: number): Dollar {
@@ -19,11 +19,27 @@ export class Money {
     return this.amount === instance.amount;
   }
 
-  times(rounds: number): Money {
-    return new Money(this.amount * rounds);
+  abstract times(rounds: number): Money;
+
+  abstract currency(): string;
+}
+
+export class Dollar extends Money {
+  times(rounds: number): Dollar {
+    return new Dollar(this.amount * rounds);
+  }
+
+  currency(): string {
+    return "USD";
   }
 }
 
-export class Dollar extends Money {}
+export class Euro extends Money {
+  times(rounds: number): Money {
+    return new Euro(this.amount * rounds);
+  }
 
-export class Euro extends Money {}
+  currency(): string {
+    return "EUR";
+  }
+}
