@@ -17,7 +17,7 @@ export abstract class Money {
   }
 
   equals(instance: Money): boolean {
-    if (this.constructor !== instance.constructor) return false;
+    if (this.getCurrency() !== instance.getCurrency()) return false;
 
     return this.amount === instance.amount;
   }
@@ -30,13 +30,13 @@ export abstract class Money {
 }
 
 export class Dollar extends Money {
-  times(rounds: number): Dollar {
+  times(rounds: number): Money {
     return new Dollar(this.amount * rounds, this.getCurrency());
   }
 }
 
 export class Euro extends Money {
-  times(rounds: number): Euro {
+  times(rounds: number): Money {
     return new Euro(this.amount * rounds, this.getCurrency());
   }
 }
