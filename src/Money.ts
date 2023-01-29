@@ -4,12 +4,12 @@ export class Money {
     protected readonly currency: string
   ) {}
 
-  static dollar(amount: number): Dollar {
-    return new Dollar(amount, "USD");
+  static dollar(amount: number): Money {
+    return new Money(amount, "USD");
   }
 
-  static euro(amount: number): Euro {
-    return new Euro(amount, "EUR");
+  static euro(amount: number): Money {
+    return new Money(amount, "EUR");
   }
 
   getAmount(): number {
@@ -30,7 +30,3 @@ export class Money {
     return this.currency;
   }
 }
-
-export class Dollar extends Money {}
-
-export class Euro extends Money {}
