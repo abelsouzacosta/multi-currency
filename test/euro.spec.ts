@@ -21,14 +21,14 @@ describe("Euro", () => {
   it("should return 10 whan 5 Euros is multipled by two", () => {
     const euro = Money.euro(5);
     const result = euro.times(2);
-    expect(result).toBeInstanceOf(Euro);
+    expect(result).toBeInstanceOf(Money);
     expect(result.getAmount()).toEqual(10);
   });
 
   it("should return 15 when 5 Euros is multiplied by three", () => {
     const euro = Money.euro(5);
     const result = euro.times(3);
-    expect(result).toBeInstanceOf(Euro);
+    expect(result).toBeInstanceOf(Money);
     expect(result.getAmount()).toEqual(15);
   });
 
