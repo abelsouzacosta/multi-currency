@@ -22,6 +22,10 @@ export class Money {
     return this.amount === instance.amount;
   }
 
+  plus(addend: Money): Money {
+    return new Money(this.getAmount() + addend.getAmount(), this.getCurrency());
+  }
+
   times(rounds: number): Money {
     return new Money(this.amount * rounds, this.getCurrency());
   }

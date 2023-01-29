@@ -33,4 +33,10 @@ describe("Dollar", () => {
   it("should correctly handle the currency", () => {
     expect(Money.dollar(1).getCurrency()).toBe("USD");
   });
+
+  it("should handle simple addition", () => {
+    const sum: Money = Money.dollar(5).plus(Money.dollar(5));
+
+    expect(sum).toStrictEqual(Money.dollar(10));
+  });
 });
